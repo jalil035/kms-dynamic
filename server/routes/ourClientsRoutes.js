@@ -1,19 +1,28 @@
-import express from 'express';
-import upload from '../middlewares/upload.js';
-import { addNewClient, deleteClient, getAllClients, updateClient } from '../Controller/ourClientsController.js';
+import express from "express";
+import upload from "../middlewares/upload.js";
+import {
+  addNewClient,
+  deleteClient,
+  getAllClients,
+  getHomeClients,
+  updateClient,
+} from "../Controller/ourClientsController.js";
 
 const router = express.Router();
 
+//Get Home page 4 clients
+router.get("/getHome", getHomeClients);
+
 //Add New Client
-router.post('/addNew', upload.single('image'), addNewClient);
+router.post("/addNew", upload.single("image"), addNewClient);
 
 //Get All Clients
-router.get('/getAll', getAllClients);
+router.get("/getAll", getAllClients);
 
 //Update Client
-router.put('/update/:id', upload.single('image'), updateClient);
+router.put("/update/:id", upload.single("image"), updateClient);
 
 //Delete Client
-router.delete('/delete/:id', deleteClient);
+router.delete("/delete/:id", deleteClient);
 
 export default router;

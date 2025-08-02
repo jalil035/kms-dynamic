@@ -9,6 +9,15 @@ const serviceSchema = new mongoose.Schema(
     image: {
       type: String,
     },
+    category: {
+      type: String,
+      enum: ["Fabrication", "Rental", "Supply"],
+      required: true,
+    },
+    shortDescription: {
+      type: String,
+      required: true,
+    },
     subject1: {
       type: String,
       required: true,

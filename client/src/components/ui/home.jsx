@@ -3,7 +3,9 @@ import Navbar from "../Shared/Navbar";
 import ImageSlider from "../Home/ImageSlider";
 import About from "../pages/About";
 import Excellence from "../Home/Excellence";
+import ServiceSection from "../Home/ServiceSection";
 import Footer from "../Shared/Footer";
+
 
 const Home = () => {
   return (
@@ -12,6 +14,7 @@ const Home = () => {
       <ImageSlider />
       <About />
       <Excellence />
+      <ServiceSection />
       <Footer />
     </div>
   );

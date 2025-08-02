@@ -9,6 +9,9 @@ import {
 
 const router = express.Router();
 
+// Add fallback GET route
+router.get("/", getAllServices);
+
 //Add New Service
 router.post("/addNew", upload.single("image"), addNewService);
 
